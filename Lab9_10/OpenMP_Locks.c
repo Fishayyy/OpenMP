@@ -11,7 +11,7 @@ int main()
     int *charCount = calloc(NUM_LETTERS, sizeof(int));
     int i;
     omp_lock_t lock[NUM_LETTERS];
-
+    
     for(int i = 0; i < NUM_LETTERS; ++i)
         omp_init_lock(&lock[i]);
 
@@ -24,7 +24,7 @@ int main()
         char currChar;
         do
         {
-            currChar = fgetc_unlocked(book);
+            currChar = fgetc(book);
             switch(currChar)
             {
                 case 'A'...'Z':

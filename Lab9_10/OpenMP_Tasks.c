@@ -25,7 +25,7 @@ int main()
                 {
                     do
                     {
-                        currChar = fgetc_unlocked(book);
+                        currChar = fgetc(book);
                         switch(currChar)
                         {
                             case 'A'...'Z':
